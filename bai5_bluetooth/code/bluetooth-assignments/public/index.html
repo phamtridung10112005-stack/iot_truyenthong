@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHT11 Monitor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <header>
+            <h2>Hệ Thống Giám Sát IoT</h2>
+            <p>DHT11 Sensor Data</p>
+        </header>
+
+        <div class="controls">
+            <button id="btnConnect" class="btn btn-connect">Kết nối Arduino</button>
+            <button id="btnDisconnect" class="btn btn-disconnect hidden">Ngắt kết nối</button>
+        </div>
+
+        <div id="status" class="status-text">Trạng thái: Chưa kết nối</div>
+
+        <div class="sensor-container">
+            <div class="card temp">
+                <div class="icon-box">
+                    <i class="fa-solid fa-temperature-high"></i>
+                </div>
+                <div class="info">
+                    <h3>Nhiệt độ</h3>
+                    <p><span id="tempVal">0</span> °C</p>
+                </div>
+            </div>
+
+            <div class="card hum">
+                <div class="icon-box">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+                <div class="info">
+                    <h3>Độ ẩm</h3>
+                    <p><span id="humVal">0</span> %</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
